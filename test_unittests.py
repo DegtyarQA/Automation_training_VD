@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 import unittest
+import pytest
 
 
 class TestRegistration(unittest.TestCase):
@@ -46,4 +47,4 @@ class TestRegistration(unittest.TestCase):
         self.assertEquals("Congratulations! You have successfully registered!", x, "Warning!!! ERROR case 2!!!")
         browser.quit()
 if __name__=="__main__":
-    unittest.main
+    pytest.main()
