@@ -23,7 +23,7 @@ try:
     button.click()
     param = browser.find_element(By.CSS_SELECTOR, "div h1")
     x = str(param.text)
-    assert "Congratulations! You have successfully registered!" == x, "Warning!!! ERROR!!!"
+    assert "Congratulations! You have successfully registered!" == x, "Warning!!! ERROR!!"
 
 finally:
     # успеваем скопировать код за 30 секунд
