@@ -18,13 +18,14 @@ def test_login_page(browser):
     button1.click()
     otvet = browser.find_element(By.CSS_SELECTOR, '.ember-text-area.ember-view.textarea.string-quiz__textarea')
     otvet.send_keys(str(math.log(int(time.time()))))
-    otpravka = WebDriverWait(browser, 5).until(
+    time.sleep(5)
+    otpravka = WebDriverWait(browser, 2).until(
         EC.element_to_be_clickable((By.CSS_SELECTOR, ".submit-submission"))
     )
     otpravka.click()
-    time.sleep(15)
+    time.sleep(5)
     poisk = browser.find_element(By.CSS_SELECTOR, ".smart-hints>.smart-hints__hint")
-    time.sleep(10)
+    time.sleep(5)
     itog = str(poisk.text)
     print(itog)
 
